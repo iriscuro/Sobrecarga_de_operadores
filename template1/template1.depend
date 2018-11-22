@@ -1,18 +1,14 @@
 # depslib dependency file v1.0
-1541982787 source:e:\ccomp1\template1\main.cpp
-	<iostream>
-	"Point.h"
+1542854044 source:e:\ccomp1\template1\src\arrpoint.cpp
 	"ArrPoint.h"
 
-1541981663 e:\ccomp1\template1\include\point.h
-
-1541977592 e:\ccomp1\template1\include\arrpoint.h
+1542864609 e:\ccomp1\template1\include\arrpoint.h
 	"Point.h"
-
-1541978652 source:e:\ccomp1\template1\src\arrpoint.cpp
-	"ArrPoint.h"
-
-1541982350 source:e:\ccomp1\template1\src\point.cpp
 	<iostream>
+
+1542854044 e:\ccomp1\template1\include\point.h
+	<iostream>
+
+1542854044 source:e:\ccomp1\template1\src\point.cpp
 	"Point.h"
 

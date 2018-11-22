@@ -1,50 +1,67 @@
+
 #include <iostream>
 #include "Point.h"
 #include "ArrPoint.h"
+#include <math.h>
+#include <stdlib.h>
+#include <fstream>
 
 using namespace std;
+/*
+ostream &operator<<(ostream& salida , const Numero& a){
+  salida << a.x ;
+  return salida;
+}
+*/
+/*
+//template <typename T>
+ArrPoint<Point<int> > operator+(ArrPoint<Point<int> > &otro,ArrPoint<Point<int> > &other)
+//Point<int> operator+(Point<int>  otro[],Point<int>  other[])
+//ArrPoint<int> operator+(ArrPoint<Point<int> > &otro,Point<int> &other[])
+{
+    //int size = sizeof(otro)/sizeof(otro[0]);
+    //int size1 = sizeof(other)/sizeof(other[0]);
+    ArrPoint<Point<int> > aux(otro);
+    aux.juntar(otro,other);
 
+    return aux;
+}
+ArrPoint<Point<int> > operator <<(ArrPoint<Point<int> >  &reult){
+    result.print();
+
+}
+*/
 int main()
 {
-
-
-    Point <int>p( 1, 3);
-    Point <int>q(4, 8);
-    Point <int>r(7, 2);
-    Point <int>s(4,5);
-    Point <int>arr[] = {p, q , r};
+    Point<int> c(13,40);
+    Point<int> p(1,3);
+    Point<int> q(3,3);
+    Point<int> r(3,1);
+    Point<int> s(9,8);
+    Point<int> t(8,7);
+    Point<int> z(5,3);
+    Point<int> a(94,12);
+    Point<int> arr[] = {p,q,r};
+    Point<int> esp[] = {t,z,a};
     int size = sizeof(arr)/sizeof(arr[0]);
+    int size1 = sizeof(esp)/sizeof(esp[0]);
+    int larg;
+    larg=size+size1;
 
-    ArrPoint<int> pa2(arr, size);
+    ArrPoint<Point<int> > ps(arr,size);
+    ArrPoint<Point<int> > ps2 = ps;
+    cout << ps2.getSize() << endl;
+    //ArrPoint<Point<int> > suma(arr,size);
+    Point<int> suma[larg];
+    suma= arr+esp;
+/*
+    ofstream archivo_salida("file.txt");
 
-    ArrPoint<int> pa = pa2;
-
-    pa.getSize();
-    //cout << pa.getSize() << endl;
-    pa.push_back(p);
-    cout<< "pa"<<endl;
-    pa.print();
-    cout<<endl;
-
-    pa.insert(1, q);
-    pa.print();
-    pa.clear();
-    cout << pa.getSize() << "\n "<<endl;
-
-    cout<< " pa2 "<<endl<<endl;
-    pa2.print();
-    cout <<endl;
-    //PointArray pa=pa2;
-    pa2.push_back(p);
-    cout<<"pa2 :"<<endl<<endl;
-    pa2.print();
-    //pa.print();
-    cout <<"\n";
-    cout <<pa.getSize()<<endl;
-    pa2.insert(4,s);
-    cout <<"pa2 ;"<<endl<<endl;
-    pa2.print();
-
-
+    for(int i=0;i<larg;i++) {
+            cin.getline(suma[i], 80);
+            archivo_salida << suma[i]<< endl;
+            archivo_salida.close();
+    }
+*/
     return 0;
 }
